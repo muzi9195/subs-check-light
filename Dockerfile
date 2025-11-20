@@ -28,5 +28,3 @@ CMD ["/app/subs-check"]
 EXPOSE 8199
 EXPOSE 8299
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8199"]
-
