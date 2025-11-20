@@ -25,5 +25,8 @@ RUN apk add --no-cache alpine-conf ca-certificates nodejs &&\
     rm -rf /usr/bin/node
 COPY --from=builder /app/subs-check /app/subs-check
 CMD ["/app/subs-check"]
-EXPOSE 7860
+EXPOSE 8199
 EXPOSE 8299
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8199"]
+
