@@ -1,6 +1,6 @@
 FROM golang:alpine AS builder
-COPY index.html ./
 WORKDIR /app
+COPY index.html ./
 COPY . .
 ARG GITHUB_SHA
 ARG VERSION
